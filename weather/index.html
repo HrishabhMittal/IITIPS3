@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="moving-image" id="image1">
+        <img src="./images/cloud_moving.png" alt="Moving Image" width="500" >
+    </div>
+    <div class="moving-image" id="image2">
+        <img src="./images/cloud_moving.png" alt="Moving Image" width="200" >
+    </div>
+    <div class="moving-image" id="image3">
+        <img src="./images/cloud_moving.png" alt="Moving Image" width="300" >
+    </div>
+    <div id="stat-container">
+        <p id="time"></p>
+        <p id="other"></p>
+    </div>
+    <div id="search-container">
+        <div id="search">
+            <input id="bar" placeholder="Search cities..." type="text" >
+            <img src="./images/search.png" id="search-button">
+        </div>
+    </div>
+    <center>
+    <div id="search-results"></div>
+    </center>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</body>
+</html>

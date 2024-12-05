@@ -1,0 +1,124 @@
+* {
+    color: white;
+}
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#search-container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.moving-image {
+  position: absolute;
+  width: 200px;
+  bottom: 10%; /* Adjust the vertical position as needed */
+  z-index: -1; /* Behind all other content */
+}
+/* Image 1 (smaller) */
+#image1 {
+  left: -500px;
+  animation-delay: 0s; /* No delay, starts immediately */
+  animation: move-across 55s linear infinite;
+}
+
+/* Image 2 (larger) */
+#image2 {
+  left: -200px;
+  animation-delay: 6s; /* Starts 2 seconds later */
+  animation: move-across 35s linear infinite;
+}
+
+/* Image 3 (medium) */
+#image3 {
+  left: -300px;
+  animation-delay: 9s; /* Starts 4 seconds later */
+  animation: move-across 30s linear infinite;
+}
+@keyframes move-across {
+  0% {
+    transform: translateX(0); /* Start at initial position */
+  }
+  100% {
+    transform: translateX(200vw); /* Move across the screen */
+  }
+}
+#search {
+    width: 50%;
+    display: flex; 
+    align-items: center;
+    background-color: rgba(200, 200, 200, 0.3); 
+    border-radius: 10px; 
+    padding: 5px; 
+}
+#bar {
+    width: 90%; 
+    height: 40px; 
+    font-size: 20px; 
+    padding-left: 10px; 
+    background-color: rgba(0, 0, 0, 0); 
+    outline: none; 
+    border: none; 
+    border-radius: 5px; 
+}
+#search-button {
+    width: 40px; 
+    height: 40px; 
+    background-color: rgba(200, 200, 200, 0); 
+    border: none; 
+    outline: none; 
+    cursor: pointer; 
+    margin-left: 5px; 
+}
+#search-results {
+    width: 40%; 
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-top: 10px; 
+    padding: 10px; 
+}
+.result-item {
+    padding: 10px 15px; 
+    font-size: 18px; 
+    color: #333; 
+    background-color: rgba(255, 255, 255, 0.6); 
+    margin-bottom: 5px; 
+    border-radius: 8px; 
+    transition: background-color 0.2s ease, transform 0.2s ease; 
+}
+.result-item:hover {
+    background-color: rgba(128, 128, 128, 0.7); 
+    transform: scale(1.02); 
+    color: #fff; 
+    cursor: pointer; 
+}
+.result-item:active {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #fff; 
+    transform: scale(0.98); 
+}
+#stat-container {
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 40%;
+}
+#time {
+    font-size: 70px; 
+    font-weight: bold; 
+    margin: 0; 
+}
+#other {
+    font-size: 18px; 
+    color: #555; 
+    margin: 5px 0 0; 
+    position: relative;
+}
