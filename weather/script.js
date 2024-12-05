@@ -1,5 +1,4 @@
 document.querySelector("body").height = innerHeight;
-const apiKey = '58f4dda1825f421278cd6cbeac0ade82';
 let city = 'Faridabad';
 let timeZone = "Asia/Kolkata";
 const searchInput = document.getElementById("bar");
@@ -28,6 +27,7 @@ function fetchWeather() {
     fetch(url)
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             displayWeather(data);
         })
         .catch(error => console.error('Error:', error));
@@ -88,5 +88,5 @@ function setBackground(weatherCondition) {
     } else if (weatherCondition === 'Rain') {
         bg= '#1b1f94'; 
     }
-body.bgColor = bg;
+    body.bgColor = bg;
 }
